@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// Class that adds Questions and Answers into the mix
 class AddQuestions: UIViewController, UITextFieldDelegate
 {
     

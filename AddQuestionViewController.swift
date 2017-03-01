@@ -22,6 +22,11 @@ class AddQuestions: UIViewController, UITextFieldDelegate
         super.viewDidLoad()
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField)
+    {
+        textField.text = ""
+    }
+    
     // Function that will enter in the new information to the current questions and answers string
     @IBAction func insertQA(_ sender: UIButton)
     {
@@ -36,8 +41,8 @@ class AddQuestions: UIViewController, UITextFieldDelegate
             questions.append(enterQuestion.text!)
             answers.append(enterAnswer.text!)
             
-            enterQuestion.placeholder = "Add another Question?"
-            enterAnswer.placeholder = "Add another Answer?"
+            textFieldDidEndEditing(enterQuestion)
+            textFieldDidEndEditing(enterAnswer)
             
             // Prompt to tell the user their content was added
             addedPrompt.text = "Question added! :)"

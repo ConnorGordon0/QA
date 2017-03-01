@@ -36,6 +36,9 @@ class AddQuestions: UIViewController, UITextFieldDelegate
             questions.append(enterQuestion.text!)
             answers.append(enterAnswer.text!)
             
+            enterQuestion.placeholder = "Add another Question?"
+            enterAnswer.placeholder = "Add another Answer?"
+            
             // Prompt to tell the user their content was added
             addedPrompt.text = "Question added! :)"
             addedPrompt.textColor = UIColor.blue

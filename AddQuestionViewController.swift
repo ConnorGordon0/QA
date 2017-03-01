@@ -51,7 +51,7 @@ class AddQuestions: UIViewController, UITextFieldDelegate
             UIView.animate(withDuration: 0.9, delay: 0.0, options: [.autoreverse, .curveEaseInOut], animations:
                 {
                     self.addedPrompt.alpha = 0
-            }, completion: nil)        }
-        
+            }, completion: nil)
+        }
     }
 }
